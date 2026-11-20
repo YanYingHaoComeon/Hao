@@ -1,0 +1,276 @@
+{
+  "schema": {
+    "outcome": "target",
+    "positive_label": "positive",
+    "continuous": [
+      "measure_a",
+      "measure_b"
+    ],
+    "categorical": [
+      "category_a"
+    ],
+    "na_values": [
+      "NA",
+      ""
+    ]
+  },
+  "split": {
+    "validation_fraction": 0.3,
+    "seed": 1729
+  },
+  "imputation": {
+    "m": 5,
+    "iterations": 50,
+    "seed": 1729,
+    "donors": 5,
+    "ridge": 1e-05,
+    "passive": {}
+  },
+  "selection": {
+    "mode": "intersection",
+    "seed": 1729,
+    "lasso": {
+      "folds": 10,
+      "rule": "lambda.1se"
+    },
+    "boruta": {
+      "p_value": 0.01,
+      "adjust_multiplicity": true,
+      "max_runs": 100,
+      "rough_fix": true
+    }
+  },
+  "training": {
+    "seed": 1729,
+    "standardize_svm_ann": true
+  },
+  "models": {
+    "lr": {
+      "params": {
+        "maxiter": 200
+      },
+      "candidates": [
+        {
+          "maxiter": 200
+        }
+      ]
+    },
+    "dt": {
+      "params": {
+        "max_depth": 4,
+        "min_samples_leaf": 5
+      },
+      "candidates": [
+        {
+          "max_depth": 3,
+          "min_samples_leaf": 5
+        },
+        {
+          "max_depth": 5,
+          "min_samples_leaf": 5
+        }
+      ]
+    },
+    "rf": {
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 6
+      },
+      "candidates": [
+        {
+          "n_estimators": 100,
+          "max_depth": 4
+        },
+        {
+          "n_estimators": 100,
+          "max_depth": 6
+        }
+      ]
+    },
+    "xgboost": {
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "learning_rate": 0.05
+      },
+      "candidates": [
+        {
+          "n_estimators": 100,
+          "max_depth": 2,
+          "learning_rate": 0.05
+        },
+        {
+          "n_estimators": 100,
+          "max_depth": 3,
+          "learning_rate": 0.05
+        }
+      ]
+    },
+    "lightgbm": {
+      "params": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "num_leaves": 7
+      },
+      "candidates": [
+        {
+          "n_estimators": 100,
+          "max_depth": 2,
+          "num_leaves": 3
+        },
+        {
+          "n_estimators": 100,
+          "max_depth": 3,
+          "num_leaves": 7
+        }
+      ]
+    },
+    "svm": {
+      "params": {
+        "C": 1,
+        "kernel": "linear"
+      },
+      "candidates": [
+        {
+          "C": 0.1,
+          "kernel": "linear"
+        },
+        {
+          "C": 1,
+          "kernel": "linear"
+        }
+      ]
+    },
+    "ann": {
+      "params": {
+        "hidden_layer_sizes": [
+          20
+        ],
+        "max_iter": 1000,
+        "alpha": 0.01
+      },
+      "candidates": [
+        {
+          "hidden_layer_sizes": [
+            10
+          ],
+          "max_iter": 1000,
+          "alpha": 0.01
+        },
+        {
+          "hidden_layer_sizes": [
+            20
+          ],
+          "max_iter": 1000,
+          "alpha": 0.01
+        }
+      ]
+    }
+  },
+  "validation": {
+    "outer_folds": 5,
+    "outer_repeats": 2,
+    "inner_folds": 3,
+    "seed": 1729
+  },
+  "evaluation": {
+    "clip": 1e-06,
+    "thresholds": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5
+    ],
+    "dca_thresholds": [
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18,
+      0.19,
+      0.2,
+      0.21,
+      0.22,
+      0.23,
+      0.24,
+      0.25,
+      0.26,
+      0.27,
+      0.28,
+      0.29,
+      0.3,
+      0.31,
+      0.32,
+      0.33,
+      0.34,
+      0.35,
+      0.36,
+      0.37,
+      0.38,
+      0.39,
+      0.4,
+      0.41,
+      0.42,
+      0.43,
+      0.44,
+      0.45,
+      0.46,
+      0.47,
+      0.48,
+      0.49,
+      0.5,
+      0.51,
+      0.52,
+      0.53,
+      0.54,
+      0.55,
+      0.56,
+      0.57,
+      0.58,
+      0.59,
+      0.6,
+      0.61,
+      0.62,
+      0.63,
+      0.64,
+      0.65,
+      0.66,
+      0.67,
+      0.68,
+      0.69,
+      0.7,
+      0.71,
+      0.72,
+      0.73,
+      0.74,
+      0.75,
+      0.76,
+      0.77,
+      0.78,
+      0.79,
+      0.8
+    ],
+    "bootstrap_iterations": 1000,
+    "bootstrap_seed": 1729
+  },
+  "interpretation": {
+    "method": "exact",
+    "max_exact_features": 12,
+    "kernel_samples": 510,
+    "seed": 1729
+  }
+}

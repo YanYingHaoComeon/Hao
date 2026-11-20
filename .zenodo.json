@@ -1,0 +1,20 @@
+{
+  "title": "Hao: Configurable binary prediction workflows",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "description": "A disease-independent framework with standalone Python and R modules for binary outcome mapping, training-restricted multiple imputation, LASSO/Boruta selection, seven prediction algorithms, repeated nested cross-validation, calibration, decision curves and probability-scale Shapley explanations. No research data, fitted models or study results are distributed.",
+  "creators": [
+    {
+      "name": "YanYingHaoComeon"
+    }
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "keywords": [
+    "machine learning",
+    "multiple imputation",
+    "nested cross-validation",
+    "explainable models"
+  ],
+  "language": "eng"
+}

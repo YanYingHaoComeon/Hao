@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the archived software release when using this framework."
+type: software
+title: "Hao: Configurable binary prediction workflows"
+version: 0.1.0
+date-released: 2026-11-20
+authors:
+  - name: "YanYingHaoComeon"
+repository-code: "https://github.com/YanYingHaoComeon/Hao"
+license: MIT
+keywords:
+  - machine learning
+  - multiple imputation
+  - nested cross-validation
