@@ -82,4 +82,10 @@ All tests generate generic synthetic observations in temporary directories. The 
 
 The framework is newly organized generic source using the documented APIs of independently installed scientific packages. Prior project-specific scripts, commercial-template text, original research Git history, contacts, variables and artifacts are **not redistributed**. Algorithms are expressed as reusable library calls, not as a relabeled copy of restricted code. Dependencies retain their own licenses; no dependency source is vendored.
 
-Hao's project-authored source is licensed under **MIT**, chosen for straightforward academic and software reuse with preserved copyright/license notices. `LICENSE`, `CITATION.cff` and `.zenodo.json` specify the same license. Cite a verified archived release when available; no DOI is reserved, guessed or placed here before publication.
+Hao's project-authored source is licensed under **MIT**, chosen for straightforward academic and software reuse with preserved copyright/license notices. `LICENSE`, `CITATION.cff` and `.zenodo.json` specify the same license.
+
+## Citation and archived release
+
+[Version 0.1.0](https://github.com/YanYingHaoComeon/Hao/releases/tag/v0.1.0) is publicly archived on [Zenodo](https://zenodo.org/records/24393539). The registered DOI resolves to the published record, and the archive's 53 files were verified against the release. The DOI was added to the repository citation metadata after archiving; the release tag remains unchanged.
+
+YanYingHaoComeon. (2026). *Hao: Configurable binary prediction workflows* (Version 0.1.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.24393539
